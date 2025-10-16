@@ -6,9 +6,15 @@ public class UIManager : MonoBehaviour
     public GameObject startPanel;
     public GameObject gamePanel;
     public GameObject settingsPanel;
-    
+
+    void Start()
+    {
+        startPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
     public void PlayButtonClicked() 
     {
+        Time.timeScale = 1;
         startPanel.SetActive(false);
         gamePanel.SetActive(true);
     }
@@ -29,6 +35,7 @@ public class UIManager : MonoBehaviour
         {
             if (gamePanel.activeInHierarchy)
             {
+                Time.timeScale = 0;
                 settingsPanel.SetActive(true);
                 gamePanel.SetActive(false);
             }
@@ -37,6 +44,7 @@ public class UIManager : MonoBehaviour
 
     public void ResumeButtonClicked()
     {
+        Time.timeScale = 1;
         gamePanel.SetActive(true);
         settingsPanel.SetActive(false);
     }
