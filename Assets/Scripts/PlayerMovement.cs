@@ -4,10 +4,13 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private int speed = 5;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator animator;
+
+    private float xPosLastFrame;
 
     private void Awake()
     {
@@ -28,15 +31,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // OPTION 1
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+    }
 
-        // OPTION 2
-        // if (movement.x != 0 || movement.y != 0)
-        // {
-        //     rb.velocity = movement * speed;
-        // }
+    private void FlipCharacterX()
+    {
         
-        //rb.AddForce(movement * speed);
     }
 }
