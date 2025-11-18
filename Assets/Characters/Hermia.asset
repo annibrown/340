@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   characterName: Hermia
   characterPrefab: {fileID: 1335503514590647797, guid: bf044287c3a2bd149889dcea08754b99, type: 3}
-  inLoveWith: {fileID: 0}
   enchantedBy: {fileID: 0}
   appearance: {fileID: 0}
+  characterColor: {r: 0.9207547, g: 0.39609826, b: 0.91996187, a: 1}

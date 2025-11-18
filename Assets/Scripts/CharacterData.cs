@@ -8,4 +8,5 @@ public class CharacterData : ScriptableObject
     //public CharacterData inLoveWith;
     public Player enchantedBy;
     public Sprite appearance; 
+    public Color characterColor;
 }

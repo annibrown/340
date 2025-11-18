@@ -7,7 +7,7 @@ public class CharacterManager : MonoBehaviour
     public List<Transform> spawnPoints;
     //public List<Character> characters = new List<Character>();
     public List<CharacterData> characterDataList;
-    private List<Character> spawnedCharacters = new List<Character>();
+    public List<Character> spawnedCharacters = new List<Character>();
     
     void Start()
     {

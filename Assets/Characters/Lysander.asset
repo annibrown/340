@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   characterName: Lysander
   characterPrefab: {fileID: 1335503514590647797, guid: bf044287c3a2bd149889dcea08754b99, type: 3}
-  inLoveWith: {fileID: 0}
   enchantedBy: {fileID: 0}
   appearance: {fileID: 0}
+  characterColor: {r: 0.4014667, g: 0.8553633, b: 0.8792453, a: 1}
