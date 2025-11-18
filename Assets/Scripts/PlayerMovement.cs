@@ -32,10 +32,20 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        FlipCharacterX();
     }
 
     private void FlipCharacterX()
     {
-        
+        if (transform.position.x > xPosLastFrame)
+        {
+            // player moving right
+            spriteRenderer.flipX = false;
+        } else if (transform.position.x < xPosLastFrame)
+        {
+            // player moving left
+            spriteRenderer.flipX = true;
+        }
+        xPosLastFrame = transform.position.x;
     }
 }

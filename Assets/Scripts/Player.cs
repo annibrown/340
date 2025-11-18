@@ -21,9 +21,7 @@ public class Player : MonoBehaviour
     // adds character to player's list if they successfully get enchanted
     public void EnchantCharacterWithLovePotion(Character character)
     {
-        if (character.enchantedWithLove == false)
-        {
-            charactersEnchanted.Add(character);
-        }
+        charactersEnchanted.Add(character);
+        // remove character from any other players' lists
     }
 }
