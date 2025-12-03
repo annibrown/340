@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public int playerID;
     
+    public List<Character> assignedCharacters = new List<Character>();
+    
     // Track which characters this player has enchanted this round
     public List<Character> enchantedCharacters = new List<Character>();
     
@@ -55,6 +57,7 @@ public class Player : MonoBehaviour
         }
         
         // Apply new enchantment
+        AudioManager.Instance.Play(AudioManager.SoundType.Enchant);
         target.enchantedByPlayer = this;
         enchantedCharacters.Add(target);
         remainingPotions--;

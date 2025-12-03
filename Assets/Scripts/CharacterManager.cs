@@ -37,7 +37,7 @@ public class CharacterManager : MonoBehaviour
     {
         return spawnedCharacters.Find(c => c.characterData.characterName == name);
     }
-    void Shuffle<T>(List<T> list)
+    public void Shuffle<T>(List<T> list)
     {
         for (int i = 0; i < list.Count; i++)
         {

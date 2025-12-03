@@ -6,8 +6,18 @@ public class GameTimer : MonoBehaviour
 {
     private int timeRemaining;
     private bool isStopped;
+    private bool playedSound = false;
     
     private Action methodToCallWhenTimeIsOver;
+
+    void Update()
+    {
+        if (timeRemaining == 10 && !playedSound)
+        {
+            AudioManager.Instance.Play(AudioManager.SoundType.Timer);
+            playedSound = true;
+        }
+    }
     
     public void StartTimer(int durationInSeconds, Action methodToCallWhenTimeIsOver)
     {
@@ -15,6 +25,7 @@ public class GameTimer : MonoBehaviour
         this.methodToCallWhenTimeIsOver = methodToCallWhenTimeIsOver;
         isStopped = false;
         timeRemaining = durationInSeconds;
+        playedSound = false;
         StartCoroutine(TickOneSecond());
     }
 

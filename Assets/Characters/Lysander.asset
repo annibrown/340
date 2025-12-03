@@ -16,4 +16,4 @@ MonoBehaviour:
   characterPrefab: {fileID: 1335503514590647797, guid: bf044287c3a2bd149889dcea08754b99, type: 3}
   enchantedBy: {fileID: 0}
   appearance: {fileID: 0}
-  characterColor: {r: 0.4014667, g: 0.8553633, b: 0.8792453, a: 1}
+  characterColor: {r: 0.32589447, g: 0.6932624, b: 0.7122642, a: 1}

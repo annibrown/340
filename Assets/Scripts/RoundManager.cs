@@ -9,7 +9,7 @@ public class RoundManager : MonoBehaviour
     public List<Player> players = new List<Player>();
     public GameTimer gameTimer;
     
-    public float roundDuration = 60f; // 60 seconds per roundpublic float roundTimer;
+    public float roundDuration = 60f; // 60 seconds per round public float roundTimer;
     private int currentRound = 0;
     
     public GameObject resultsScreen;
@@ -23,6 +23,7 @@ public class RoundManager : MonoBehaviour
         Debug.Log("Starting new round");
         Time.timeScale = 1;
         UIManager.HideResults();
+        UIManager.PlayBackgroundMusic();
         currentRound++;
         
         Debug.Log("=== ROUND " + currentRound + " START ===");
@@ -49,9 +50,6 @@ public class RoundManager : MonoBehaviour
         
         UIManager.ShowResults();
         Time.timeScale = 0;
-        
-        // Wait a bit before starting next round (you can add a UI delay here)
-        Invoke("StartNewRound", 10f);
     }
     
     void RevealRelationships()
@@ -69,7 +67,7 @@ public class RoundManager : MonoBehaviour
             }
             else
             {
-                Debug.Log(character.characterData.characterName + " is not in love");
+                results += character.characterData.characterName + " is not in love \n";
             }
         }
 
